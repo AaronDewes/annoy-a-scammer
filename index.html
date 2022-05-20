@@ -1472,7 +1472,7 @@ let mn = new Mnemonic();
        
        
        function sendAmount(amount) {
-        while (let i = 0; i < amount; i++) {
+        for (let i = 0; i < amount; i++) {
           sendFakeCredentials(mn.generate(256));
         }
        }
